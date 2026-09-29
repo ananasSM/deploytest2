@@ -4,6 +4,8 @@ const app = express();
 
 const socket = process.env.SOCKET;
 
+console.log("SOCKET =", socket);
+
 if (!socket) {
     console.error("SOCKET is not defined");
     process.exit(1);
