@@ -2,9 +2,9 @@ const express = require("express");
 
 const app = express();
 
-const socket = process.env.SOCKET;
+console.log("SOCKET =", process.env.SOCKET);
 
-console.log("SOCKET =", socket);
+const socket = process.env.SOCKET;
 
 if (!socket) {
     console.error("SOCKET is not defined");
@@ -16,5 +16,5 @@ app.get("/", (req, res) => {
 });
 
 app.listen(socket, () => {
-    console.log(`Listening on ${socket}`);
+    console.log("Listening on", socket);
 });
